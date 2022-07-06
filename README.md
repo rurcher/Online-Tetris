@@ -8,43 +8,25 @@
 
 windows端游戏菜单
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/417d1825228a4227b6e1c9c3309497d1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
-
 linux端游戏菜单
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7c3fbf60f52a47b78966b69226263996.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 ### 1v1对战
 
 Windows游戏界面（左边为用户，右边为对手）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/95550e391a3a47808bb9cd764776bd29.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
-
 Windows方失败
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1e47b19ed1394e9dad00fc80c5aa5f7f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
-
 Linux方胜利
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1835ad4480414f56a9072562efe33909.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 ### 9人对局
 
 9人乱斗一方在累计伤害大于等于其他玩家人数的情况下向所有其他玩家发送一格黑块
 
-![玩家向其他所有人发送一个黑块进行攻击](https://img-blog.csdnimg.cn/38fd2223d4f34a599a7dd0c8c6854145.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
-
 游戏进行到中期玩家逐渐减少
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1bbb13af1edd4a3d8478261affd1a6a1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 9人模式中的败者
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/275489ebb5914172a2104737e4203b30.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
-
 9人模式中的胜者
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/73fd4b941b4f4041836c5ad77dc8ba46.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 ## 游戏特性细节介绍
 
@@ -55,7 +37,6 @@ Linux方胜利
 
 - 玩家一次消除1行至4行方块时将造成1，3，5，7点伤害。伤害（白色方块）加入受击槽（下图左边方框）中储存，槽中黑色方块为受到的伤害的缓存，白色方块造成伤害的缓存。存储的伤害（白色方块）大于等于存活的其他玩家数量时会消耗白色方块，往其他玩家的受击槽中添加一个黑色方块，这算作对其他玩家造成伤害，计入score得分。
 - 受击槽中存在黑色方块时便开始计时，10秒黑色方块减半(向上取整)，减去的数量会使玩家的对局中的所有方块往上移动一格，并且在最下一行添加一行随机缺一个口的黑方块（左边玩家累计收到了九点伤害）
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/a86e363148d84cb1b0d7d27eb649e2cf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 ### Tetris标准特性
 
@@ -66,7 +47,7 @@ Linux方胜利
 
 当旋转后方块有部分卡在边界或者现有方块中时，游戏系统将尝试将方块“踢”入附近的其他位置，称为wall kick。
 IOTSZJL表示方块类型，0,R,2,L 方块的四种方向
-下面第一张图为官网给除的wallkick数据，第二张图的解释为当方块L从方向0逆时针转到方向L时，系统会依次对方块旋转后偏移（0,0),(+1,0),(+1,+1),(0,+2),(+1,-2)当有一个匹配成功则旋转成功，否则旋转失败。![在这里插入图片描述](https://img-blog.csdnimg.cn/979111a5e2864cd3bb3887c8f4f50e74.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)![在这里插入图片描述](https://img-blog.csdnimg.cn/e09d863b763c4d319547d72b2efa880c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
+下面第一张图为官网给除的wallkick数据，第二张图的解释为当方块L从方向0逆时针转到方向L时，系统会依次对方块旋转后偏移（0,0),(+1,0),(+1,+1),(0,+2),(+1,-2)当有一个匹配成功则旋转成功，否则旋转失败。
 
 #### 7 bag system （7袋系统）
 
@@ -75,7 +56,6 @@ IOTSZJL表示方块类型，0,R,2,L 方块的四种方向
 #### hold piece （hold槽系统）
 
 游戏需要有一个能暂时存放方块的hold box（盒子）来将目前的方块和hold box中的方块进行替换。（按s键）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8484332bd20749679024a5336214db10.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 #### soft drop（软降）
 
@@ -88,7 +68,6 @@ IOTSZJL表示方块类型，0,R,2,L 方块的四种方向
 #### ghost piece（幽灵方块）
 
 用虚影显示当前方块硬降后的位置。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0026fd2b0b3745f0879bb4080a4bbb0f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBALVotRy1ELQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 #### lock delay（延迟锁定）
 
